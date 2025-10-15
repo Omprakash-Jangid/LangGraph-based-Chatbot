@@ -22,17 +22,19 @@ It uses a **Streamlit frontend** for interactive chat and a **backend** for hand
 
 ## 🗂 Project Structure
 
+```text
 LangGraph_Chatbot/
 ├── backend/
-│ └── langgraph_database_backend.py
+│   └── langgraph_database_backend.py
 ├── frontend/
-│ └── chatbot_ui.py
+│   └── chatbot_ui.py
 ├── assets/
-│ └── chatbot_ui_screenshot.png
+│   └── chatbot_ui_screenshot.png
 ├── .env
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
@@ -50,9 +52,8 @@ Here’s how the LangGraph Chatbot looks in action:
 
 ## ⚙️ Setup Instructions
 
-1. **Clone the repository**
-
 ```bash
+1. **Clone the repository**
 git clone https://github.com/yourusername/LangGraph_Chatbot.git
 cd LangGraph_Chatbot
 
@@ -70,4 +71,4 @@ GOOGLE_API_KEY=your_google_api_key_here
 
 5. **Run the frontend UI**
 streamlit run frontend/chatbot_ui.py
-Open the URL shown in the terminal (usually http://localhost:8501).
+```
