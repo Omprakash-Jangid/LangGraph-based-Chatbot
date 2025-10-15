@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Add project root to Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import streamlit as st
 from backend.langgraph_database_backend import chatbot, retrieve_all_threads
 from langchain_core.messages import HumanMessage, AIMessage
