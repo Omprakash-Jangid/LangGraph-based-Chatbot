@@ -88,10 +88,10 @@ def retrieve_all_threads():
     return list(all_threads)
 
 #test
-CONFIG = {'configurable': {'thread_id': 'thread_id-1'}}
-response = chatbot.invoke(
-                {"messages": [HumanMessage(content="what is my name buddy?")]},
-                config=CONFIG
-            )
+# CONFIG = {'configurable': {'thread_id': 'thread_id-1'}}
+# response = chatbot.invoke(
+#                 {"messages": [HumanMessage(content="what is my name buddy?")]},
+#                 config=CONFIG
+#             )
 
-print("Response:",response)
+# print("Response:",response)
