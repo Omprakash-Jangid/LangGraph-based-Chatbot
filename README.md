@@ -4,19 +4,20 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.49.0-orange)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-A **stateful chatbot** built using **Google Gemini LLM** with **LangGraph** for conversation state management.  
-It uses a **Streamlit frontend** for interactive chat and a **backend** for handling AI responses, conversation state, and SQLite-based persistence.
+A **stateful chatbot** powered by **Google Gemini LLM** and **LangGraph**, designed to demonstrate tool-augmented, multi-turn conversational AI with persistent context.  
+The project includes a backend built with LangGraph and SQLite checkpointing, and an optional Streamlit UI for interactive chat.
 
 ---
 
 ## 🌟 Features
 
-- **Stateful conversations**: Supports multiple chat threads and resumes previous sessions.  
-- **Google Gemini LLM integration** via `langchain-google-genai`.  
-- **SQLite database** stores chat threads persistently.  
-- **Streamlit frontend**: Modern chat interface with styled message bubbles.  
-- **Secure API management** using `.env` for environment variables.  
-- Modular backend and frontend for easy extension.
+- **Stateful conversations** — each thread is tracked and restorable across sessions.  
+- **Tool-augmented reasoning** — includes web search, calculator, and stock price tools.  
+- **LangGraph orchestration** — manages chat and tool nodes with conditional transitions.  
+- **SQLite checkpointing** — persists chat state and tool execution history.  
+- **Gemini-2.5-Flash-Lite integration** via `langchain-google-genai`.  
+- **Environment variable security** through `.env`.  
+- Modular and easily extensible structure.
 
 ---
 
@@ -30,11 +31,32 @@ LangGraph_Chatbot/
 │   └── chatbot_ui.py
 ├── assets/
 │   └── chatbot_ui_screenshot.png
-├── .env
+├── .env     # API keys and environment variables
 ├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
+## 🧠 Tools Integrated
+
+| 🧩 Tool Name | ⚙️ Description |
+|--------------|----------------|
+| **DuckDuckGo Search** | Fetches real-time web results using the DuckDuckGo API. |
+| **Calculator** | Performs arithmetic operations — addition, subtraction, multiplication, and division. |
+| **Stock Price Fetcher** | Retrieves live stock market data using the Alpha Vantage API. |
+
+---
+
+## 🧰 Tech Stack
+
+| 🧱 Component | 📝 Description |
+|--------------|----------------|
+| **Python 3.10+** | Core programming language used. |
+| **LangGraph** | For graph-based LLM orchestration and managing chat flow. |
+| **LangChain** | Framework connecting tools, LLMs, and chains together. |
+| **Google Gemini API** | LLM powering the chatbot’s reasoning and responses. |
+| **SQLite** | Local database for checkpointing conversation state. |
+| **dotenv** | Secure management of API keys and environment variables. |
+| **Requests** | Used for making external API calls to fetch live data. |
 
 ---
 
@@ -72,3 +94,19 @@ GOOGLE_API_KEY=your_google_api_key_here
 5. **Run the frontend UI**
 streamlit run frontend/chatbot_ui.py
 ```
+
+---
+
+## 🚀 Future Enhancements
+
+- [ ] Add **user authentication** and personalized chat sessions.  
+- [ ] Integrate **multiple LLM providers** (OpenAI, Anthropic Claude).  
+- [ ] Implement **logging and analytics dashboard** for insights.  
+- [ ] Add **export to PDF/Markdown** feature for chat history.  
+
+---
+
+## 🪪 License
+
+This project is licensed under the **MIT License**.  
+You are free to **use, modify, and distribute** the code with proper attribution.
